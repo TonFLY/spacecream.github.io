@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Palanquin&family=Staatliches&display=swap');
+* {
+  padding: 0;
+  border: 0;
+  box-sizing: border-box; 
+}
+
+:root {
+  /* Font Family */
+  --ff-heading: 'Staatliches';
+  --ff-wrapper: 'Palanquin', sans-serif;
+  /* Colors*/
+  --hue: 250;
+  --bc-heading: hsla(var(--hue), 17%, 62%, 1);
+  --bc-wrapper: hsla(var(--hue), 100%, 97%, 1);
+  --bc-cardname: hsla(var(--hue), 91%, 96%, 1);
+  --bc-secondaryheading: hsla(var(--hue), 18%, 79%, 1);
+  --fc-heading: hsla(var(--hue), 0%, 100%, 1);
+  --fc-paragraph: hsla(var(--hue), 84%, 12%, 1);
+  --fc-cardname: hsla(var(--hue), 17%, 35%, 1);
+
+  font-size: 62.5%;
+  --fs-heading: 2rem;
+  --fs-paragraph: 2.0rem;
+  --fs-cardname: 2.0rem;
+}
+
+.page {
+  margin: 0 auto;
+  max-width: 38.4rem;
+}
+
+header {
+  background: var(--bc-heading);
+  text-align: center;
+  padding: 3.2rem 0 3.2rem;
+  animation: TopDown 650ms;
+  min-width: 38.4rem;
+}
+
+.spacecream {
+  background: var(--bc-secondaryheading);
+  font-family: var(--ff-heading);
+  color: var(--fc-heading);
+  font-size: var(--fs-heading);
+  line-height: 3.4rem;
+  height: 4.9rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.2em;
+  margin-top: 3.2rem;
+  
+}
+
+main {
+  padding: 0 3.2rem 6rem;
+  text-align: center;
+  background: var(--bc-wrapper);
+  display: grid;
+  gap: 3.6rem;
+
+}
+
+main p {
+  font-family: var(--ff-wrapper);
+  font-size: var(--fs-paragraph);
+  line-height: 1.5rem;
+  color: var(--fc-paragraph);
+}
+.card {
+  position: relative;
+  font-family: var(--ff-wrapper);
+}
+
+.card img {
+  border-radius: 20px;
+  transition: 250ms;
+
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  filter: brightness(0.8);
+}
+
+
+.card h2 {
+  position: absolute;
+  top: 1.7rem;
+  right: 4rem;
+  background-color: var(--bc-cardname);
+  border-radius: 2rem;
+  width: fit-content;
+  display: inline-flex;
+  color: var(--fc-cardname);
+  height: 3rem;
+  padding: 0 1.5rem;
+  
+}
+
+@keyframes TopDown {
+  0% {
+    opacity: 0;
+    transform: TranslateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: TranslateY(0);
+  }
+
+}
